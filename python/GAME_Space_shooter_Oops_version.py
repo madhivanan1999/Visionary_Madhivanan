@@ -107,7 +107,7 @@ class Game:
         self.enemies = [Enemy() for _ in range(5)]
         self.scoreboard = Scoreboard()
         #syncronize keyboard
-        self.screen.listen() #Without this, pressing keys wouldn’t trigger anything.
+        self.screen.listen() #Without this pressing keys wouldn’t trigger anything.
         self.screen.onkeypress(self.player.left_side, "Left")
         self.screen.onkeypress(self.player.right_side, "Right")
         self.screen.onkeypress(self.fire_bullet, "space" )
