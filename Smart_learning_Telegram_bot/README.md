@@ -32,39 +32,24 @@ This system acts as an AI academic assistant that:
 
 # 🧠 System Architecture
 
-User (Telegram)
-↓
-bot.py (Telegram Interface)
-↓
-ai_tutor.py (Groq LLM - Planning & Reasoning)
-↓
-mcp_server.py (FastAPI Tool Execution Layer)
-↓
-mcp_tools.py (Tool Registry)
-↓
-services.py (Business Logic Layer)
-↓
-database.py (PostgreSQL Connection)
-↓
-PostgreSQL (Data Storage)
+User (Telegram)--> bot.py (Telegram Interface)--> ai_tutor.py (Groq LLM - Planning & Reasoning)--> mcp_server.py (FastAPI Tool Execution Layer)--> mcp_tools.py (Tool Registry)--> services.py (Business Logic Layer)--> database.py (PostgreSQL Connection)--> PostgreSQL (Data Storage)
 
 ---
 
 # 📁 Project Structure
 
 smart_learning_bot/
-│
-├── bot.py              # Telegram bot interface
-├── ai_tutor.py         # AI roadmap + tutor logic (Groq LLM)
-├── mcp_server.py       # MCP tool execution server (FastAPI)
-├── mcp_tools.py       # Tool functions for AI execution
-├── services.py         # Business logic (roadmap + tracking)
-├── database.py         # PostgreSQL connection setup
-├── models.py           # Database schema (students, tasks, progress)
-├── config.py           # Environment configuration
-├── main.py             # Application entry point
-├── req.txt             # Dependencies
-└── .env                # Environment variables
+|-- bot.py              # Telegram bot interface
+|-- ai_tutor.py         # AI roadmap + tutor logic (Groq LLM)
+|-- mcp_server.py       # MCP tool execution server (FastAPI)
+|-- mcp_tools.py       # Tool functions for AI execution
+|-- services.py         # Business logic (roadmap + tracking)
+|-- database.py         # PostgreSQL connection setup
+|-- models.py           # Database schema (students, tasks, progress)
+|-- config.py           # Environment configuration
+|-- main.py             # Application entry point
+|-- req.txt             # Dependencies
+|-- .env                # Environment variables
 
 ---
 
